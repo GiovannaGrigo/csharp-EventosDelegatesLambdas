@@ -9,6 +9,10 @@
             InitializeComponent();
             caixaEletronico = new CaixaEletronico();
             ImprimirLogo();
+            btnSacar.Click += BtnSacar_Click;
+            btnDepositar.Click += BtnDepositar_Click;
+            btnSaldo.Click += BtnSaldo_Click;
+            btnExtrato.Click += BtnExtrato_Click;
         }
 
         private void ImprimirLogo()
@@ -104,6 +108,14 @@
             txtConsole.Text += Environment.NewLine;
             txtConsole.SelectionStart = txtConsole.TextLength;
             txtConsole.ScrollToCaret();
+        }
+
+        private void btnNumero_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+
+            char numeral = btn.Name.Last();
+            txtValor.Text += numeral;
         }
     }
 }
