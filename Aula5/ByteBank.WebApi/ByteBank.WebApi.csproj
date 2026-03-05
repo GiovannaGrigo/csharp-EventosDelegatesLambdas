@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <NoWarn>NETSDK1138;CS8618</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
