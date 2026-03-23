@@ -28,6 +28,11 @@
                 WriteToConsole("Saldo insuficiente!");
             };
 
+            caixaEletronico.OnLimiteUtilizado += (sender, e) =>
+            {
+              WriteToConsole("Atenção! Você está utilizando o limite disponível para sua conta!");
+            };
+
             ImprimirLogo();
 
             btnSacar.Click += BtnSacar_Click;
